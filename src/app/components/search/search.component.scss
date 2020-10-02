@@ -1,0 +1,17 @@
+@import "../../../styles.scss";
+.banner {
+    width: 100%;
+    margin: 0px;
+    .m-75 {
+        margin: 20px auto;
+        ;
+    }
+}
+
+.borderLine {
+    height: 2px;
+    width: 80%;
+    margin: 0px auto;
+    background-color: $Mutek-festival-website-3-hex;
+    border-radius: 5px;
+}

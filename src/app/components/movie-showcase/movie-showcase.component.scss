@@ -1,0 +1,63 @@
+@import "../../../styles.scss";
+.row-movies {
+    padding: 0px 20px;
+    .heading {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    .showCase {
+        overflow: auto;
+        .movieCards {
+            height: 490px;
+            .mat-card {
+                background: $Mutek-festival-website-3-hex;
+            }
+            .movieCard {
+                width: 250px;
+                height: 350px;
+                float: left;
+                margin: 10px;
+                list-style: none;
+                color: #fff;
+                cursor: pointer;
+                .options {
+                    position: absolute;
+                    font-size: 14px;
+                    color: $Mutek-festival-website-5-hex;
+                    background: $Mutek-festival-website-4-hex;
+                }
+                .mat-card-image {
+                    width: calc(100% + 32px);
+                    margin: -16px -16px 16px -16px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+                .mat-card-header {
+                    margin: 0px!important;
+                    .mat-card-title {
+                        font-size: 14px;
+                    }
+                    .mat-card-subtitle {
+                        font-size: 12px;
+                    }
+                }
+                .mat-card-header-text {
+                    margin: 0px!important;
+                }
+                .contentRM {
+                    height: 120px;
+                    overflow: auto;
+                }
+                .voteAverage {
+                    display: flex;
+                    li {
+                        width: 50px;
+                        height: 50px;
+                        list-style: none;
+                    }
+                }
+            }
+        }
+    }
+}

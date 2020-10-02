@@ -1,0 +1,46 @@
+<div class="row-movies">
+    <div class="showCase">
+        <ul class="movieCards" [ngStyle]="{'width.px':seachResultSetLength}">
+            <li class="movieCard" *ngFor="let movie of seachResultSet" [routerLink]="['/moviedetails', movie.id]">
+                <mat-card class="example-card">
+                    <button class="options" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><mat-icon>more_vert</mat-icon></button>
+                    <img mat-card-image src="{{ movie.backdrop_path === null ? defaultImg : baseImageURL + movie.backdrop_path }} " alt={{movie.original_title}}>
+                    <ul class="voteAverage">
+                        <li>
+                            <circle-progress [percent]=movie.vote_average [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
+                        </li>
+                        <li>
+                            <circle-progress [percent]=movie.popularity [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
+                        </li>
+                        <li>
+                            <circle-progress [percent]=movie.vote_count [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
+                        </li>
+                    </ul>
+                    <mat-card-content>
+                        <mat-card-title>{{movie.original_title}}</mat-card-title>
+                        <mat-card-subtitle>Release Date:{{movie.release_date}}</mat-card-subtitle>
+                    </mat-card-content>
+                </mat-card>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="addtoList()">
+      <mat-icon>visibility</mat-icon>
+      <span>Watch</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>airplay</mat-icon>
+      <span>InProgress</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>preview</mat-icon>
+      <span>Watched</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>done_all</mat-icon>
+        <span>Reviewed</span>
+    </button>
+</mat-menu>

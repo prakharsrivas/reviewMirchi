@@ -1,0 +1,12 @@
+<div class="row banner">
+    <div class="col-md-6 m-75">
+        <div class="input-group mb-3">
+            <input type="text" [(ngModel)]="seachKeyword" id="seachKeywordId" #seachKeywordSel class="form-control" placeholder="Search">
+            <div class="input-group-append">
+                <button (click)="searchFun()" class="btn btn-success" type="submit">Go</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="borderLine"></div>
+<app-movie-showcase *ngIf="seachResultFlag" [seachResultSet]="seachResultSet" [seachResultSetLength]="seachResultSetLength"></app-movie-showcase>

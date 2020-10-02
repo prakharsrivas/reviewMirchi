@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #B5BF8F;
+    color: #fff;
+}
+
+
+/* Color Theme Swatches in Hex */
+
+$review-mirchi-green-hex: #009633;
+$review-mirchi-organge-hex: #FF8E00;
+$review-mirchi-yellow-hex: #F4D400;
+$review-mirchi-red-hex: #C10700;
+$review-mirchi-blue-hex: #098CCF;
+
+/* Color Theme Swatches in RGBA */
+
+$review-mirchi-green-rgba: rgba(0, 149, 51, 1);
+$review-mirchi-organge-rgba: rgba(255, 142, 0, 1);
+$review-mirchi-yellow-rgba: rgba(244, 212, 0, 1);
+$review-mirchi-red-rgba: rgba(193, 7, 0, 1);
+$review-mirchi-blue-rgba: rgba(8, 140, 207, 1);
+
+/* Color Theme Swatches in HSLA */
+
+$review-mirchi-green-hsla: hsla(140, 100, 29, 1);
+$review-mirchi-organge-hsla: hsla(33, 100, 50, 1);
+$review-mirchi-yellow-hsla: hsla(52, 100, 47, 1);
+$review-mirchi-red-hsla: hsla(2, 100, 37, 1);
+$review-mirchi-blue-hsla: hsla(200, 91, 42, 1);
+
+/* Color Theme Swatches in Hex */
+
+$Mutek-festival-website-1-hex: #8C8C8C;
+$Mutek-festival-website-2-hex: #B5BF8F;
+$Mutek-festival-website-3-hex: #AFBF36;
+$Mutek-festival-website-4-hex: #DFF24B;
+$Mutek-festival-website-5-hex: #0D0D0D;
+
+/* Color Theme Swatches in RGBA */
+
+$Mutek-festival-website-1-rgba: rgba(140, 140, 140, 1);
+$Mutek-festival-website-2-rgba: rgba(180, 191, 143, 1);
+$Mutek-festival-website-3-rgba: rgba(175, 191, 53, 1);
+$Mutek-festival-website-4-rgba: rgba(222, 242, 75, 1);
+$Mutek-festival-website-5-rgba: rgba(12, 12, 12, 1);
+
+/* Color Theme Swatches in HSLA */
+
+$Mutek-festival-website-1-hsla: hsla(0, 0, 55, 1);
+$Mutek-festival-website-2-hsla: hsla(73, 27, 65, 1);
+$Mutek-festival-website-3-hsla: hsla(67, 56, 48, 1);
+$Mutek-festival-website-4-hsla: hsla(67, 86, 62, 1);
+$Mutek-festival-website-5-hsla: hsla(0, 0, 5, 1);
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+}
+
+.mat-menu-panel {
+    background: $Mutek-festival-website-3-hex!important;
+}

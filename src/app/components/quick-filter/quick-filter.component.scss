@@ -1,0 +1,14 @@
+@import "../../../styles.scss";
+.quickFilter {
+    width: 100%;
+    margin: 0px;
+    .m-20 {
+        margin: 20px auto;
+        ;
+    }
+    button {
+        background-color: $Mutek-festival-website-3-hex;
+        color: #fff;
+        border: none;
+    }
+}
