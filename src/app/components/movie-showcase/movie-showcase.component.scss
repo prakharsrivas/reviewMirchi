@@ -11,7 +11,8 @@
         .movieCards {
             height: 490px;
             .mat-card {
-                background: $Mutek-festival-website-3-hex;
+                background: $review-mirchi-yellow-hex;
+                color: $Mutek-festival-website-5-hex;
             }
             .movieCard {
                 width: 250px;
@@ -19,13 +20,13 @@
                 float: left;
                 margin: 10px;
                 list-style: none;
-                color: #fff;
+                color: #000;
                 cursor: pointer;
                 .options {
                     position: absolute;
                     font-size: 14px;
                     color: $Mutek-festival-website-5-hex;
-                    background: $Mutek-festival-website-4-hex;
+                    background: #ffff0054;
                 }
                 .mat-card-image {
                     width: calc(100% + 32px);
@@ -34,7 +35,7 @@
                     border-top-right-radius: 5px;
                 }
                 .mat-card-header {
-                    margin: 0px!important;
+                    margin: 10px 0px!important;
                     .mat-card-title {
                         font-size: 14px;
                     }
@@ -60,4 +61,14 @@
             }
         }
     }
+}
+
+.mat-card-subtitle {
+    color: $Mutek-festival-website-5-hex!important;
+}
+
+.back-btn {
+    right: 56px;
+    position: absolute;
+    top: 80px;
 }

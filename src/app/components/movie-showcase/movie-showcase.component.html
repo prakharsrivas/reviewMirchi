@@ -1,11 +1,12 @@
-<div class="row-movies">
+<div class="row-movies" *ngIf="seachResultFlag">
     <div class="showCase">
+        <button *ngIf="backbutton=== 'true'" class="back-btn btn btn-secondary" (click)="backFun()" type="button">Back</button>
         <ul class="movieCards" [ngStyle]="{'width.px':seachResultSetLength}">
-            <li class="movieCard" *ngFor="let movie of seachResultSet" [routerLink]="['/moviedetails', movie.id]">
+            <li class="movieCard" *ngFor="let movie of seachResultSet">
                 <mat-card class="example-card">
                     <button class="options" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><mat-icon>more_vert</mat-icon></button>
-                    <img mat-card-image src="{{ movie.backdrop_path === null ? defaultImg : baseImageURL + movie.backdrop_path }} " alt={{movie.original_title}}>
-                    <ul class="voteAverage">
+                    <img [routerLink]="['moviedetails']" [state]="movie.id" mat-card-image src="{{ movie.backdrop_path === null ? defaultImg : baseImageURL + movie.backdrop_path }} " alt={{movie.original_title}}>
+                    <ul class="voteAverage" [routerLink]="['moviedetails']" [state]="movie.id">
                         <li>
                             <circle-progress [percent]=movie.vote_average [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
                         </li>
@@ -16,7 +17,7 @@
                             <circle-progress [percent]=movie.vote_count [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
                         </li>
                     </ul>
-                    <mat-card-content>
+                    <mat-card-content [routerLink]="['moviedetails']" [state]="movie.id">
                         <mat-card-title>{{movie.original_title}}</mat-card-title>
                         <mat-card-subtitle>Release Date:{{movie.release_date}}</mat-card-subtitle>
                     </mat-card-content>
@@ -31,7 +32,7 @@
       <mat-icon>visibility</mat-icon>
       <span>Watch</span>
     </button>
-    <button mat-menu-item disabled>
+    <button mat-menu-item>
       <mat-icon>airplay</mat-icon>
       <span>InProgress</span>
     </button>

@@ -3,12 +3,11 @@
     width: 100%;
     margin: 0px;
     .m-20 {
-        margin: 20px auto;
-        ;
+        margin: 20px auto 25px;
     }
     button {
-        background-color: $Mutek-festival-website-3-hex;
-        color: #fff;
+        background-color: $review-mirchi-blue-hex;
+        color: $review-mirchi-white-hex;
         border: none;
     }
 }

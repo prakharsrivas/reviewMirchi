@@ -1,0 +1,29 @@
+@import "../../../styles.scss";
+.m-20 {
+    margin: 10px 20px;
+}
+
+.mat-card-image {
+    border: 10px solid $Mutek-festival-website-3-hex;
+}
+
+.heading {
+    font-size: 25px;
+    color: #000;
+    font-weight: 500;
+    padding: 10px 30px 10px;
+    color: #c1c115;
+}
+
+.overView {
+    color: #c1c115;
+}
+
+.voteAverage {
+    display: flex;
+    li {
+        width: 50px;
+        height: 50px;
+        list-style: none;
+    }
+}

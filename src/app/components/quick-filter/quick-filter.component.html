@@ -1,10 +1,10 @@
 <div class="row quickFilter">
     <div class="col-md-2"></div>
-    <div class="col-md-2 m-20"><button mat-raised-button matBadge="8" matBadgePosition="before" matBadgeColor="accent" type="button" (click)="searchFun('7060180')" class="btn btn-secondary btn-lg btn-block">Watch</button></div>
+    <div class="col-md-2 m-20"><button mat-raised-button matBadge={{seachResultSet.length}} matBadgePosition="before" matBadgeColor="accent" type="button" (click)="searchFun('7060180')" class="btn btn-secondary btn-lg btn-block">Watch</button></div>
     <div class="col-md-2 m-20"><button mat-raised-button matBadge="8" matBadgePosition="before" matBadgeColor="accent" type="button" (click)="searchFun('7060240')" class="btn btn-secondary btn-lg btn-block">InProgress</button></div>
     <div class="col-md-2 m-20"><button mat-raised-button matBadge="8" matBadgePosition="before" matBadgeColor="accent" type="button" (click)="searchFun('7060163')" class="btn btn-secondary btn-lg btn-block">Watched</button></div>
     <div class="col-md-2 m-20"><button mat-raised-button matBadge="8" matBadgePosition="before" matBadgeColor="accent" type="button" (click)="searchFun('7060241')" class="btn btn-secondary btn-lg btn-block">Reviewed</button></div>
     <div class="col-md-1"></div>
 </div>
 
-<app-movie-showcase *ngIf="seachResultFlag" [seachResultSet]="seachResultSet" [seachResultSetLength]="seachResultSetLength"></app-movie-showcase>
+<app-movie-showcase *ngIf="seachResultFlag" backButton="false" [seachResultSet]="seachResultSet" [seachResultSetLength]="seachResultSetLength"></app-movie-showcase>

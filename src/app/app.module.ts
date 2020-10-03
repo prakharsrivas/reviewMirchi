@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuickFilterComponent } from './components/quick-filter/quick-filter.component';
 import { MovieShowcaseComponent } from './components/movie-showcase/movie-showcase.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     SearchComponent,
     QuickFilterComponent,
     MovieShowcaseComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    HomeComponent
     
   ],
   imports: [

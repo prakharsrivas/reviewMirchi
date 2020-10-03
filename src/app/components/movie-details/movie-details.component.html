@@ -1,13 +1,27 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-4">
-                <img mat-card-image src="{{ moiveData.backdrop_path === null ? defaultImg : baseImageURL + moiveData.backdrop_path }} " alt={{moiveData.original_title}}>
-            </div>
-            <div class="col-md-6">
-                <h3>{{moiveData.original_title}}</h3>
-                <p>{{moiveData.overview}}</p>
-            </div>
+        <button type="button" [routerLink]="['']" class="btn btn-secondary">Back</button>
+        <h1 class="heading">{{moiveData.original_title}}</h1>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <img mat-card-image src="{{ moiveData.backdrop_path === null ? defaultImg : baseImageURL + moiveData.backdrop_path }} " alt={{moiveData.original_title}}>
+            <button class="btn btn-secondary">Delete</button><button class="btn btn-secondary">Some Other Action</button>
+        </div>
+        <div class="col-md-7 overView">
+            <ul class="voteAverage">
+                <li>
+                    <circle-progress [percent]=moiveData.vote_average [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
+                </li>
+                <li>
+                    <circle-progress [percent]=moiveData.popularity [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
+                </li>
+                <li>
+                    <circle-progress [percent]=moiveData.vote_count [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#FFFFFF'" [innerStrokeColor]="'#FFFFFF'" [animation]="true" [animationDuration]="1800" [responsive]="true"></circle-progress>
+                </li>
+            </ul>
+            <p>{{moiveData.overview}}</p>
         </div>
     </div>
 </div>
