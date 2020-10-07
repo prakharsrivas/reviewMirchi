@@ -14,14 +14,12 @@ export class MovieDetailsComponent implements OnInit{
   public baseImageURL:string=environment['baseImageURL'];
   public defaultImg:string= "../../../assets/Poster_unavailable.jpg";
   public moiveData:any;
-  public moiveId:any;
 
-  constructor( private dataService: DataService,private router:Router,private activatedRoute:ActivatedRoute) { 
-    this.moiveId=this.router.getCurrentNavigation().extras.state;
+  constructor( private dataService: DataService,private router:Router,private activatedRoute:ActivatedRoute){
   }
 
   ngOnInit(): void {
-    this.movieDetailsFun(this.moiveId);
+    this.movieDetailsFun(this.activatedRoute.snapshot.params['id']);
   }
 
   public movieDetailsFun(moiveId){

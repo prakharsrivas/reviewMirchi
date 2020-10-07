@@ -49,3 +49,12 @@ p {
 .toolbar #twitter-logo:hover {
     opacity: 0.8;
 }
+
+.dropdown {
+    a {
+        color: $review-mirchi-yellow-hex;
+    }
+    .dropdown-menu {
+        background: $review-mirchi-black-hex;
+    }
+}

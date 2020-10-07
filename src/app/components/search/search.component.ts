@@ -12,14 +12,13 @@ export class SearchComponent implements OnInit {
   public seachResultSet:any;
   public seachResultSetLength:number;
   public seachResultFlag:boolean=false;
-  public baseImageURL:string;
-  public defaultImg:string;
+  public baseImageURL:string=environment['baseImageURL'];
+  public defaultImg:string= "../../../assets/Poster_unavailable.jpg"
 
   constructor( private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.baseImageURL= environment['baseImageURL'];
-    this.defaultImg = "../../../assets/Poster_unavailable.jpg"
+
   }
 
   searchFun(){

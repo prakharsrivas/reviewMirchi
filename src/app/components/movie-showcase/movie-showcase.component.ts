@@ -12,7 +12,7 @@ export class MovieShowcaseComponent implements OnInit {
 
   @Input() seachResultSet:any;
   @Input() seachResultSetLength:string;
-  @Input() backButton:string;
+  @Input() backButton:boolean;
   public baseImageURL:string=environment['baseImageURL'];
   public defaultImg:string="../../../assets/Poster_unavailable.jpg";
   public seachResultFlag:boolean=true;
@@ -22,13 +22,14 @@ export class MovieShowcaseComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.backButton);
+    console.log(this.seachResultSet);
   }
 
   public backFun(){  
     this.seachResultFlag=!this.seachResultFlag;
   }
 
-  public addtoList(){
-    
+  public addtoList(event){
+    console.log(event);
   }
 }

@@ -7,7 +7,7 @@ import { QuickFilterComponent } from './components/quick-filter/quick-filter.com
 import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
-  { path: 'moviedetails', component: MovieDetailsComponent},
+  { path: 'moviedetails/:id', component: MovieDetailsComponent},
   { path: '', component: HomeComponent }
   
 ];
